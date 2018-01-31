@@ -1,0 +1,1 @@
+select substring(Name,1,50) as Name, Value from sp_iqstatus() 

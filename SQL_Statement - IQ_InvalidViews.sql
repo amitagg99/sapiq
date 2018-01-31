@@ -1,0 +1,1 @@
+select U.user_name , T.table_name as object_name from sysobject O, systab T, sysuser U where T.object_id=O.object_id and U.user_id=T.creator and O.status=2 

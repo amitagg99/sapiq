@@ -1,0 +1,1 @@
+select Value from sa_eng_properties() where PropName ='CommandLine';

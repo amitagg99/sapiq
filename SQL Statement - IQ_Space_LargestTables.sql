@@ -1,0 +1,1 @@
+select owner,object_name, convert (float,substr (columns,1, char_length (columns)-1))*power (1024,charindex(substr(columns,char_length(columns),1),'BKMGTP')-1) as bytes from sp_iqdbspaceinfo() order by 3 desc

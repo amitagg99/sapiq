@@ -1,0 +1,1 @@
+select a.index_name, a.index_type, b.creation_time,a.table_id from sysindex a, sysobject b where a.object_id=b.object_id and a.index_name='<INDEX_NAME>'

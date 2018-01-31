@@ -1,0 +1,43 @@
+===================================================================================
+DBISQL SCRIPT FOR COLLECTING IQ DATABASE CONFIGURATION CHECK AND PERFORMANCE TUNING
+===================================================================================
+INTRODUCTION
+========================================================================
+Info
+---------------------------------------------------------------------------
+Author: Amit Agarwal, Senior Support Engineer, SAP Active Global Support
+Purpose: Database Health Check
+-------------------------------------------------------------------------------
+This script can runs on Interactive SQL or DBISQL or any IQ clients with appropriate permissions
+The purpose of script is for tuning SAP IQ
+
+These utilities include:
+1) DB version, Parameter, User roles privs,
+2) Object(Table/Index/View/Store Procedure) Information,
+3) Active SQL's, longops and locks details,
+4) IQ Cache stats and licence info,
+5) Space usage and Backup info,
+6) Logfiles, DBfile, Partition Info,
+7) General database overview,
+and some more. .. 
+
+Disclaimer
+----------------------------------------------------------------------------------------
+- Use the script at your own risk!!!
+- If you have suggestions for enhancing this script, please send an email to amit.agarwal02@sap.com 
+
+
+SPOOL Help
+==========================
+Creating Output File from Interactive SQL
+-----------------------------------------------------------------------------------------
+SELECT * FROM Employees; OUTPUT TO employees.html FORMAT HTML
+or 
+SELECT * FROM Employees; OUTPUT TO employees.log FORMAT TEXT
+
+
+Creating Output File from Interactive SQL
+-----------------------------------------------------------------------------------------
+SELECT * FROM Employees >& empfile
+or 
+SELECT * FROM Employees ># empfile

@@ -1,0 +1,1 @@
+select A.proc_name,C.user_name,B.creation_time from sysprocedure A, sysobject B,sysuser C where B.object_type=6 AND A.object_id=B.object_id AND A.creator=C.user_id AND A.creator NOT IN (0,3,6) AND datediff(dd,B.creation_time,getdate()) <=31  order by B.creation_time desc
